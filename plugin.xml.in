@@ -1,0 +1,22 @@
+<pluginMetaData path="updatecheck">
+    <name>Update Check</name>
+    <author>Matthew Ratcliffe</author>
+    <pluginVersion>@PLUGIN_VERSION@</pluginVersion>
+    <!--
+      Exact string match against the server version, split on commas. An
+      extension declaring anything else is refused outright by ExtensionLoader
+      and silently not loaded, so build.sh stamps this from MIRTH_VERSION.
+    -->
+    <mirthVersion>@MIRTH_VERSION@</mirthVersion>
+    <url>https://openintegrationengine.org</url>
+    <description>Watches the release feeds for the engine and for the extensions this engine has installed, and puts an "update available" chip beside the version in the console header when one is published. Clicking it opens a page saying what applying it involves in this stack. It never downloads or installs anything.</description>
+
+    <serverClasses>
+        <string>org.openintegrationengine.plugins.updatecheck.UpdateCheckServicePlugin</string>
+    </serverClasses>
+
+    <library type="SERVER" path="libs/updatecheck-server.jar" />
+
+    <apiProvider type="SERVLET_INTERFACE" name="org.openintegrationengine.plugins.updatecheck.UpdateCheckServletInterface" />
+    <apiProvider type="SERVER_CLASS" name="org.openintegrationengine.plugins.updatecheck.UpdateCheckServlet" />
+</pluginMetaData>

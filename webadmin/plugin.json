@@ -1,0 +1,10 @@
+{
+    "id": "updatecheck",
+    "name": "Update Check",
+    "version": "0.1.0",
+    "author": "Matthew Ratcliffe",
+    "description": "An \"update available\" chip beside the version in the console header, and an Updates page saying what applying each one involves in this stack.",
+    "enabled": true,
+    "oie": { "apiMin": "4.6" },
+    "client": { "entry": "web/plugin.js" }
+}
